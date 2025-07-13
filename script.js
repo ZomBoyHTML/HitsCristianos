@@ -622,7 +622,14 @@ const canciones = {
   Html5Qrcode.getCameras()
     .then((devices) => {
       if (devices && devices.length) {
-        const cameraId = devices[0].id;
+        // Buscar una cámara que contenga "back" o "rear" en el nombre
+const rearCamera = devices.find(device => 
+  device.label.toLowerCase().includes("back") || 
+  device.label.toLowerCase().includes("rear")
+);
+
+// Si existe una cámara trasera, úsala. Si no, usa la primera.
+const cameraId = rearCamera ? rearCamera.id : devices[0].id;
         html5QrCode.start(
           cameraId,
           {
