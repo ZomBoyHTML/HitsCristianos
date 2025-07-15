@@ -604,45 +604,59 @@ const canciones = {
   };
   console.log("Cantidad de alabanzas:", Object.keys(canciones).length);
 
-  function onScanSuccess(decodedText) {
-    if (canciones[decodedText]) {
-      const cancion = canciones[decodedText];
-      document.getElementById("tituloCancion").textContent = cancion.titulo;
-      document.getElementById("detalleCancion").textContent = `${cancion.artista} - ${cancion.año}`;
-      document.getElementById("youtubePlayer").src =
-        `https://www.youtube.com/embed/${cancion.youtubeId}?autoplay=1&rel=0`;
+function onScanSuccess(decodedText) {
+  const cancion = canciones[decodedText];
+  const modo = document.getElementById("modoJuego")?.value || "jugador";
+
+  const tituloEl = document.getElementById("tituloCancion");
+  const detalleEl = document.getElementById("detalleCancion");
+  const youtubeEl = document.getElementById("youtubePlayer");
+
+  if (cancion) {
+    if (modo === "sonidista") {
+      tituloEl.textContent = cancion.titulo;
+      detalleEl.textContent = `${cancion.artista} - ${cancion.año}`;
     } else {
-      document.getElementById("tituloCancion").textContent = "Código QR no reconocido";
-      document.getElementById("detalleCancion").textContent = "";
-      document.getElementById("youtubePlayer").src = "";
+      tituloEl.textContent = "Alabanza escaneada";
+      detalleEl.textContent = "";
     }
+
+    youtubeEl.src = `https://www.youtube.com/embed/${cancion.youtubeId}?autoplay=1&rel=0`;
+  } else {
+    tituloEl.textContent = "Código QR no reconocido";
+    detalleEl.textContent = "";
+    youtubeEl.src = "";
   }
+}
 
-  const html5QrCode = new Html5Qrcode("reader");
-  Html5Qrcode.getCameras()
-    .then((devices) => {
-      if (devices && devices.length) {
-        // Buscar una cámara que contenga "back" o "rear" en el nombre
-const rearCamera = devices.find(device => 
-  device.label.toLowerCase().includes("back") || 
-  device.label.toLowerCase().includes("rear")
-);
+// Inicializar el lector QR
+const html5QrCode = new Html5Qrcode("reader");
 
-// Si existe una cámara trasera, úsala. Si no, usa la primera.
-const cameraId = rearCamera ? rearCamera.id : devices[0].id;
-        html5QrCode.start(
-          cameraId,
-          {
-            fps: 10,
-            qrbox: 250,
-            aspectRatio: 1.0
-          },
-          onScanSuccess
-        );
-      } else {
-        alert("No se encontró cámara disponible.");
-      }
-    })
-    .catch((err) => {
-      alert("Error al acceder a la cámara: " + err);
-    });
+Html5Qrcode.getCameras()
+  .then((devices) => {
+    if (devices && devices.length) {
+    
+      const rearCamera = devices.find(
+        (device) =>
+          device.label.toLowerCase().includes("back") ||
+          device.label.toLowerCase().includes("rear")
+      );
+
+      const cameraId = rearCamera ? rearCamera.id : devices[0].id;
+
+      html5QrCode.start(
+        cameraId,
+        {
+          fps: 10,
+          qrbox: 250,
+          aspectRatio: 1.0,
+        },
+        onScanSuccess
+      );
+    } else {
+      alert("No se encontró cámara disponible.");
+    }
+  })
+  .catch((err) => {
+    alert("Error al acceder a la cámara: " + err);
+  });
