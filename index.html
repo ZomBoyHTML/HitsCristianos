@@ -1,181 +1,222 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>HitsCristianos</title>
-<link rel="icon" href="Logo/icon.png" type="image/png" sizes="32x32">
-<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #fefefe;
-    color: #2c3e50;
-    margin: 0; padding: 0;
-  }
-  header {
-  background: #502c5cdf;
-  color: white;
-  padding: 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HitsCristianos</title>
+  <link rel="icon" href="Logo/icon.png" type="image/png" sizes="32x32">
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #fefefe;
+      color: #2c3e50;
+      margin: 0;
+      padding: 0;
+    }
 
-#bienvenida {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #ffffff;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  box-sizing: border-box;
-  text-align: center;
-}
+    header {
+      background: #502c5cdf;
+      color: white;
+      padding: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.contenido-bienvenida {
-  max-width: 500px;
-  width: 100%;
-}
+    #bienvenida {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #ffffff;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
 
-#bienvenida img {
-  width: 90px;
-  height: 90px;
-  margin-bottom: 1rem;
-}
+    .contenido-bienvenida {
+      max-width: 500px;
+      width: 100%;
+    }
 
-#bienvenida h2 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
+    #bienvenida img {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 1rem;
+    }
 
-#bienvenida p {
-  font-size: 1rem;
-  color: #444;
-  margin: 0.5rem 0;
-}
+    #bienvenida h2 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
 
-#bienvenida blockquote {
-  margin: 1rem auto;
-  font-style: italic;
-  color: #555;
-  font-size: 0.95rem;
-}
+    #bienvenida p {
+      font-size: 1rem;
+      color: #444;
+      margin: 0.5rem 0;
+    }
 
-#bienvenida button {
-  margin-top: 1.5rem;
-  padding: 0.6rem 1.5rem;
-  background-color: #6a1b9a;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  font-size: 1rem;
-  cursor: pointer;
-}
+    #bienvenida blockquote {
+      margin: 1rem auto;
+      font-style: italic;
+      color: #555;
+      font-size: 0.95rem;
+    }
 
-#bienvenida footer {
-  margin-top: 2rem;
-  font-size: 0.8rem;
-  color: #999;
-}
+    #bienvenida button {
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.5rem;
+      background-color: #6a1b9a;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
 
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
+    #bienvenida footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #999;
+    }
 
-.icono-grande {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-  .menu-icono {
-    text-decoration: none;
-    color: white;
-    font-size: 1.4rem;
-    margin-left: auto;
-  }
-  #reader {
-    margin: 20px auto;
-    width: 300px;
-    max-width: 90vw;
-  }
-  #info {
-    margin-top: 20px;
-  }
-  iframe {
-    margin-top: 20px;
-    width: 90vw;
-    max-width: 400px;
-    height: 225px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(74,20,140,0.5);
-  }
-  footer {
-    margin-top: 2rem;
-    font-size: 0.8rem;
-    color: #888;
-  }
-</style>
+    .icono-grande {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .menu-icono {
+      text-decoration: none;
+      color: white;
+      font-size: 1.4rem;
+      margin-left: auto;
+    }
+
+    #reader {
+      margin: 20px auto;
+      width: 300px;
+      max-width: 90vw;
+    }
+
+    #info {
+      margin-top: 20px;
+    }
+
+    iframe {
+      margin-top: 20px;
+      width: 90vw;
+      max-width: 400px;
+      height: 225px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(74, 20, 140, 0.5);
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+  </style>
 </head>
+
 <body>
-<div id="bienvenida" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; padding: 2rem; text-align: center;">
-  <img src="Logo/icon.png" alt="Logo HitsCristiano" style="width: 90px; height: 90px; margin-bottom: 1rem;" />
-  <h2>¡Bienvenido a HitsCristianos!</h2>
-  <p>¡Diviértete escaneando alabanzas, aprende mientras cantas y adora con alegría!</p>
-  <p>👉 Para ver cómo se juega, toca el botón «❔» en la esquina superior derecha.</p>
-  <blockquote style="margin-top: 1rem; font-style: italic;">
-    "Cantad alegres a Jehová, habitantes de toda la tierra. <br />
-    Servid a Jehová con alegría; <br />
-    venid ante su presencia con regocijo." <br />
-    <strong>Salmos 100:1-2</strong>
-  </blockquote>
-  <button onclick="empezar()" style="margin-top: 1.5rem; padding: 0.6rem 1.2rem; background-color: #6a1b9a; color: white; border: none; border-radius: 20px; font-size: 1rem;">Empezar</button>
-  <footer style="margin-top: 2rem; font-size: 0.8rem; color: #888;">&copy; JuvenisFide Studios</footer>
-</div>
-  <header>
-  <div class="header-left">
-    <img src="Logo/icon.png" alt="Icono Grande" class="icono-grande" />
-    <span>HitsCristianos</span>
+  <div id="bienvenida"
+    style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; padding: 2rem; text-align: center;">
+    <img src="Logo/icon.png" alt="Logo HitsCristiano" style="width: 90px; height: 90px; margin-bottom: 1rem;" />
+    <h2>¡Bienvenido a HitsCristianos!</h2>
+    <p>¡Diviértete escaneando alabanzas, aprende mientras cantas y adora con alegría!</p>
+    <p>👉 Para ver cómo se juega, toca el botón «❔» en la esquina superior derecha.</p>
+    <blockquote style="margin-top: 1rem; font-style: italic;">
+      "Cantad alegres a Jehová, habitantes de toda la tierra. <br />
+      Servid a Jehová con alegría; <br />
+      venid ante su presencia con regocijo." <br />
+      <strong>Salmos 100:1-2</strong>
+    </blockquote>
+    <div style="margin-top: 1rem;">
+      <label for="modoJuego">Selecciona tu rol:</label><br>
+      <select id="modoJuego" onchange="actualizarDescripcionModo()"
+        style="margin-top: 0.5rem; padding: 0.5rem; border-radius: 10px; font-size: 1rem;">
+        <option value="jugador">Jugador</option>
+        <option value="sonidista">Sonidista</option>
+      </select>
+      <div id="descripcionModo" style="margin-top: 0.5rem; font-size: 0.9rem; color: #555;">
+        (NO puede ver información de la alabanza)
+      </div>
+    </div>
+
+    <button onclick="empezar()"
+      style="margin-top: 1.5rem; padding: 0.6rem 1.2rem; background-color: #6a1b9a; color: white; border: none; border-radius: 20px; font-size: 1rem;">Empezar</button>
+    <footer style="margin-top: 2rem; font-size: 0.8rem; color: #888;">&copy; JuvenisFide Studios</footer>
   </div>
-  <a href="comojugar.html" class="menu-icono" title="Cómo se juega">❔</a>
-</header>
+  <header>
+    <div class="header-left">
+      <img src="Logo/icon.png" alt="Icono Grande" class="icono-grande" />
+      <span>HitsCristianos</span>
+    </div>
+    <a href="comojugar.html" class="menu-icono" title="Cómo se juega">❔</a>
+  </header>
 
 
   <div id="reader"></div>
 
   <div id="info">
     <h2 id="tituloCancion">Escanea el QR de la alabanza</h2>
+    <p id="artistaCancion" style="display: none;"></p>
+    <p id="anioCancion" style="display: none;"></p>
     <p id="detalleCancion"></p>
   </div>
 
-  <iframe
-    id="youtubePlayer"
-    src=""
-    allow="autoplay"
-    allowfullscreen
-    title="Reproductor de YouTube"
-  ></iframe>
+
+  <iframe id="youtubePlayer" src="" allow="autoplay" allowfullscreen title="Reproductor de YouTube"></iframe>
 
   <footer>&copy; JuvenisFide Studios</footer>
 
-<script src="script.js" defer></script>
+  <script src="script.js" defer></script>
 
-<script>
-  function empezar() {
-    document.getElementById('bienvenida').style.display = 'none';
-  }
-</script>
+  <script>
+    function empezar() {
+      document.getElementById('bienvenida').style.display = 'none';
+    }
+  </script>
+
+  <script>
+    function empezar() {
+      document.getElementById('bienvenida').style.display = 'none';
+    }
+
+    function actualizarDescripcionModo() {
+      const modo = document.getElementById("modoJuego").value;
+      const descripcion = document.getElementById("descripcionModo");
+
+      if (modo === "sonidista") {
+        descripcion.textContent = "(Puede ver el título, artista y año de la alabanza)";
+      } else {
+        descripcion.textContent = "(NO puede ver información de la alabanza)";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", actualizarDescripcionModo);
+  </script>
+
 </body>
+
 </html>
