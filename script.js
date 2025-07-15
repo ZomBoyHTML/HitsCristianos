@@ -604,6 +604,10 @@ const canciones = {
   };
   console.log("Cantidad de alabanzas:", Object.keys(canciones).length);
 
+// Inicializar el lector QR
+const html5QrCode = new Html5Qrcode("reader");
+let cameraId = null;
+
 function onScanSuccess(decodedText) {
   const cancion = canciones[decodedText];
   const modo = document.getElementById("modoJuego")?.value || "jugador";
@@ -612,37 +616,46 @@ function onScanSuccess(decodedText) {
   const detalleEl = document.getElementById("detalleCancion");
   const youtubeEl = document.getElementById("youtubePlayer");
 
-  if (cancion) {
-    if (modo === "sonidista") {
-      tituloEl.textContent = cancion.titulo;
-      detalleEl.textContent = `${cancion.artista} - ${cancion.año}`;
-    } else {
-      tituloEl.textContent = "Alabanza escaneada";
-      detalleEl.textContent = "";
-    }
+  // Detener escaneo temporalmente para evitar múltiples lecturas
+  html5QrCode.stop().then(() => {
+    console.log("Escaneo detenido. Esperando 3 segundos...");
 
-    youtubeEl.src = `https://www.youtube.com/embed/${cancion.youtubeId}?autoplay=1&rel=0`;
-  } else {
-    tituloEl.textContent = "Código QR no reconocido";
-    detalleEl.textContent = "";
-    youtubeEl.src = "";
-  }
+    setTimeout(() => {
+      if (cancion) {
+        if (modo === "sonidista") {
+          tituloEl.textContent = cancion.titulo;
+          detalleEl.textContent = `${cancion.artista} - ${cancion.año}`;
+        } else {
+          tituloEl.textContent = "Alabanza escaneada";
+          detalleEl.textContent = "";
+        }
+
+        youtubeEl.src = `https://www.youtube.com/embed/${cancion.youtubeId}?autoplay=1&rel=0`;
+      } else {
+        tituloEl.textContent = "Código QR no reconocido";
+        detalleEl.textContent = "";
+        youtubeEl.src = "";
+      }
+
+      // Si quieres reiniciar el escaneo automáticamente, descomenta esta línea:
+      html5QrCode.start(cameraId, { fps: 10, qrbox: 250, aspectRatio: 1.0 }, onScanSuccess);
+
+    }, 3000);
+  }).catch((err) => {
+    console.error("Error al detener el escaneo:", err);
+  });
 }
-
-// Inicializar el lector QR
-const html5QrCode = new Html5Qrcode("reader");
 
 Html5Qrcode.getCameras()
   .then((devices) => {
     if (devices && devices.length) {
-    
       const rearCamera = devices.find(
         (device) =>
           device.label.toLowerCase().includes("back") ||
           device.label.toLowerCase().includes("rear")
       );
 
-      const cameraId = rearCamera ? rearCamera.id : devices[0].id;
+      cameraId = rearCamera ? rearCamera.id : devices[0].id;
 
       html5QrCode.start(
         cameraId,
@@ -660,3 +673,4 @@ Html5Qrcode.getCameras()
   .catch((err) => {
     alert("Error al acceder a la cámara: " + err);
   });
+
