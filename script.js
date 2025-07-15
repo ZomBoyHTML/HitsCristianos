@@ -637,8 +637,16 @@ function onScanSuccess(decodedText) {
         youtubeEl.src = "";
       }
 
-      // Si quieres reiniciar el escaneo automáticamente, descomenta esta línea:
-      html5QrCode.start(cameraId, { fps: 10, qrbox: 250, aspectRatio: 1.0 }, onScanSuccess);
+      // ✅ Reactivar el lector automáticamente después de 3 segundos
+      html5QrCode.start(
+        cameraId,
+        {
+          fps: 10,
+          qrbox: 250,
+          aspectRatio: 1.0,
+        },
+        onScanSuccess
+      );
 
     }, 3000);
   }).catch((err) => {
@@ -673,4 +681,3 @@ Html5Qrcode.getCameras()
   .catch((err) => {
     alert("Error al acceder a la cámara: " + err);
   });
-
