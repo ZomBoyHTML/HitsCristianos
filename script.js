@@ -560,7 +560,7 @@ const canciones = {
     santo_vive: {
       titulo: "Santo es el que Vive",
       artista: "Montesanto ",
-      año: "2023",
+      año: "1977",
       youtubeId: "y9Hp_WN6lHk"
     },
     te_doy_gracias: {
