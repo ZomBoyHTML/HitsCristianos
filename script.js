@@ -432,7 +432,8 @@ const canciones = {
       año: "2015",
       youtubeId: "H9mjfbwiDN8"
     },
-    gloria_jehová: {
+    //agregar qr
+    gloria_jehova: {
       titulo: "la Gloria de Jehová",
       artista: "Coros Unidos",
       año: "1982",
