@@ -317,7 +317,6 @@ const canciones = {
       año: "2014",
       youtubeId: "GF5aP0hhhmM"
     },
-//arreglar
     poder_nombre: {
       titulo: "El Poder de Tu Nombre",
       artista: "Coros Unidos",
