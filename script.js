@@ -431,13 +431,6 @@ const canciones = {
       año: "2015",
       youtubeId: "H9mjfbwiDN8"
     },
-    //agregar qr
-    gloria_jehova: {
-      titulo: "la Gloria de Jehová",
-      artista: "Coros Unidos",
-      año: "1982",
-      youtubeId: "QmM7_7UP0PM"
-    },
     proclamare_victoria: {
       titulo: "Proclamaré Victoria",
       artista: "Coros Unidos",
@@ -599,6 +592,13 @@ const canciones = {
       artista: "Fanny Narváez",
       año: "2010",
       youtubeId: "1G9R7KS86-8"
+    },
+    //agregar qr
+    gloria_jehova: {
+      titulo: "la Gloria de Jehová",
+      artista: "Coros Unidos",
+      año: "1982",
+      youtubeId: "QmM7_7UP0PM"
     }
 //agregar nueva alabanza: 1
 
