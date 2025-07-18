@@ -326,7 +326,7 @@ const canciones = {
     su_sangre: {
       titulo: "Su Sangre",
       artista: "Coros Unidos",
-      año: "2015",
+      año: "2013",
       youtubeId: "rKmJZGQry4g"
     },
     toda_gloria:{
