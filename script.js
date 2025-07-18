@@ -14,7 +14,7 @@ const canciones = {
     mora_vida: {
       titulo: "Mora en mi Vida",
       artista: "Gladys Muñoz",
-      año: "2018",
+      año: "2008",
       youtubeId: "9hNC1I7YiEk"
     },
     ebenezer: {
