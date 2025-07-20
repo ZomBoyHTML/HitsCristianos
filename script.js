@@ -277,7 +277,7 @@ const canciones = {
     },
     te_alabare:{
       titulo: "Por Siempre Te Alabaré",
-      artista: "Horacio Vivares",
+      artista: "Coros Unidos",
       año: "2013",
       youtubeId: "bAS7Fl4KxRk"
     },
