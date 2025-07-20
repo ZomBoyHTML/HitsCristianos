@@ -374,7 +374,7 @@ const canciones = {
     rey_del_universo: {
       titulo: "Rey del Universo",
       artista: "IMPCH",
-      año: "2014",
+      año: "2010",
       youtubeId: "zZL7Em3vTqY"
     },
     siempre_camine:{
