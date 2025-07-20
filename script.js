@@ -50,7 +50,7 @@ const canciones = {
     por_ti_por_mi: {
       titulo: "Por ti, por mí",
       artista: "IMPCH",
-      año: "1990",
+      año: "1980",
       youtubeId: "bNDtFR3WFaE"
     },
     vive_hoy:{
