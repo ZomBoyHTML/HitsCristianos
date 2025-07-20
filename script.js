@@ -343,8 +343,8 @@ const canciones = {
     },
     creele_a_dios: {
       titulo: "Créele a Dios",
-      artista: "Los Hermanos Vargas",
-      año: "2021",
+      artista: "Miguel Leal",
+      año: "2010",
       youtubeId: "1HHI6quzrRE"
     },
     yo_vencere: {
