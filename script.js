@@ -589,8 +589,8 @@ const canciones = {
     },
     cuarto_varon:{
       titulo: "El Cuarto Varón",
-      artista: "Fanny Narváez",
-      año: "2010",
+      artista: "Hermanos Zúñiga",
+      año: "1986",
       youtubeId: "1G9R7KS86-8"
     },
     //agregar qr
