@@ -248,7 +248,7 @@ const canciones = {
     gran_victoria: {
       titulo: "La Gran Victoria",
       artista: "Polo Negrete",
-      año: "2010",
+      año: "2005",
       youtubeId: "axZ3hJvO78g"
     },
     estoy_feliz: {
