@@ -62,7 +62,7 @@ const canciones = {
     divino_companero: {
       titulo: "Divino Compañero",
       artista: "Antonio Rivera",
-      año: "1970",
+      año: "1967",
       youtubeId: "gR1NCY1gMio"
     },
     rey_esta_volviendo: {
