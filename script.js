@@ -428,7 +428,7 @@ const canciones = {
     maravilloso_evento: {
       titulo: "Maravilloso Evento",
       artista: "Coros Unidos",
-      año: "2015",
+      año: "1994",
       youtubeId: "H9mjfbwiDN8"
     },
     proclamare_victoria: {
