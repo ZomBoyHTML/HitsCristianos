@@ -439,8 +439,8 @@ const canciones = {
     },
     digno_santo:{
       titulo: "Digno y Santo",
-      artista: "Coros Unidos",
-      año: "1997",
+      artista: "Kari Jobe",
+      año: "2009",
       youtubeId: "2qcD3dpWBXg"
     },
     carta_timoteo:{
