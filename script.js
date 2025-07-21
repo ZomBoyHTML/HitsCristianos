@@ -350,7 +350,7 @@ const canciones = {
     yo_vencere: {
       titulo: "Yo Venceré",
       artista: "Coros Unidos",
-      año: "2012",
+      año: "2011",
       youtubeId: "i2oiFpUXzbY"
     },
     luz_y_salvacion: {
