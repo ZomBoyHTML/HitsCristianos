@@ -494,7 +494,7 @@ const canciones = {
     cristo_yo_creo:{
       titulo: "Cristo, yo creo en ti",
       artista: "Crystal Lewis",
-      año: "2011",
+      año: "1998",
       youtubeId: "g-4mbgboRm0"
     },
     salon_trono:{
