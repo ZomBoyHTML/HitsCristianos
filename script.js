@@ -332,7 +332,7 @@ const canciones = {
     toda_gloria:{
       titulo: "Tú te Mereces Toda la Gloria",
       artista: "Coros Unidos",
-      año: "2014",
+      año: "2013",
       youtubeId: "ENFCaml2F-I"
     },
     conmigo_va:{
