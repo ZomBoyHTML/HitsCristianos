@@ -446,7 +446,7 @@ const canciones = {
     carta_timoteo:{
       titulo: "Carta a Timoteo",
       artista: "LOS EVANGELISTAS",
-      año: "2007",
+      año: "1992",
       youtubeId: "BA7k0RKJlb4"
     },
     sin_manchas:{
