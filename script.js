@@ -20,7 +20,7 @@ const canciones = {
     ebenezer: {
       titulo: "Ebenezer",
       artista: "Coros Unidos",
-      año: "2013",
+      año: "2003",
       youtubeId: "dZRRRqxCweI"
     },
     amanecer_glorioso: {
