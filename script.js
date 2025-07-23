@@ -272,7 +272,7 @@ const canciones = {
     consagrado:{
       titulo: "Consagrado a Ti",
       artista: "Coros Unidos",
-      año: "2010",
+      año: "1996",
       youtubeId: "W6_9KXd0KE8"
     },
     te_alabare:{
