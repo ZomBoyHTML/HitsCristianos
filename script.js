@@ -566,7 +566,7 @@ const canciones = {
     te_doy_gracias: {
       titulo: "Te doy gracias",
       artista: "LATIDOS",
-      año: "2010",
+      año: "1995",
       youtubeId: "bD6h1S8LID8"
     },
     vista:{
