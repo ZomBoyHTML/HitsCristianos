@@ -599,7 +599,7 @@ const canciones = {
       artista: "Coros Unidos",
       año: "1982",
       youtubeId: "QmM7_7UP0PM"
-    }
+    },
     jehova_jireh: {
       titulo: "Jehová Jireh",
       artista: "Coros Unidos",
