@@ -600,8 +600,12 @@ const canciones = {
       año: "1982",
       youtubeId: "QmM7_7UP0PM"
     }
-//agregar nueva alabanza: 1
-
+    jehova_jireh: {
+      titulo: "Jehová Jireh",
+      artista: "Coros Unidos",
+      año: "2023",
+      youtubeId: "NbR3oDYNizM"
+    }
 
   };
   console.log("Cantidad de alabanzas:", Object.keys(canciones).length);
