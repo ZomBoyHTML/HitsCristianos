@@ -278,7 +278,7 @@ const canciones = {
     te_alabare:{
       titulo: "Por Siempre Te Alabaré",
       artista: "Coros Unidos",
-      año: "2013",
+      año: "2010",
       youtubeId: "bAS7Fl4KxRk"
     },
     rayo_fugaz:{
@@ -380,7 +380,7 @@ const canciones = {
     siempre_camine:{
       titulo: "Siempre Caminé",
       artista: "Coros Unidos",
-      año: "2015",
+      año: "2003",
       youtubeId: "V44-ZEcB3Q8"
     },
     mi_redentor: {
@@ -471,7 +471,7 @@ const canciones = {
       titulo: "Sou Um Milagre(Soy Milagro)",
       artista: "Carlos Alberto Moyses",
       año: "1980",
-      youtubeId: "isMrX5js9og"
+      youtubeId: "rw9DwvbPDcU"
     },
     me_alegrare:{
       titulo: "Todavia Me alegrarei(Todavía Me alegraré)",
