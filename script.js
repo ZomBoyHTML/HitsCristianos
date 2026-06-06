@@ -483,7 +483,7 @@ const canciones = {
       titulo: "Escudo",
       artista: "Ariel Villareal",
       año: "2012",
-      youtubeId: "oaqkqx-4veQ"
+      youtubeId: "4pjPOOCPEDo"
     },
     plenitud:{
       titulo: "Mi Plenitud",
