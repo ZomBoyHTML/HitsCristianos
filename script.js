@@ -441,7 +441,7 @@ const canciones = {
       titulo: "Digno y Santo",
       artista: "Kari Jobe",
       año: "2009",
-      youtubeId: "2qcD3dpWBXg"
+      youtubeId: "qYDvR--_EqU"
     },
     carta_timoteo:{
       titulo: "Carta a Timoteo",
